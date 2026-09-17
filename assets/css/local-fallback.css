@@ -1,0 +1,41 @@
+/* Never leave a restricted localhost preview behind the loading screen. */
+html:not(.original-runtime-ready) .root.hide {
+  display: block !important;
+}
+
+html:not(.local-runtime-ready):not(.original-runtime-ready) .main-preloader {
+  animation: local-preloader-exit 9s ease forwards;
+}
+
+html:not(.local-runtime-ready):not(.original-runtime-ready) .scene { display: none; }
+html:not(.local-runtime-ready):not(.original-runtime-ready) .hero { height: 100vh !important; }
+html:not(.local-runtime-ready):not(.original-runtime-ready) .sub-hero { height: auto !important; margin-top: 0 !important; }
+html:not(.local-runtime-ready):not(.original-runtime-ready) .sub-hero__wrapper { min-height: 100vh; position: relative !important; }
+html:not(.local-runtime-ready):not(.original-runtime-ready) .work { margin-top: 0 !important; }
+html:not(.local-runtime-ready):not(.original-runtime-ready) .work__list__wrapper { position: relative !important; }
+html:not(.local-runtime-ready):not(.original-runtime-ready) .work-item.hidden,
+html:not(.local-runtime-ready):not(.original-runtime-ready) .hero__text.hidden,
+html:not(.local-runtime-ready):not(.original-runtime-ready) .hero__stripes.hidden { visibility: visible !important; }
+
+.main-preloader.local-exit { opacity: 0; visibility: hidden; transition: opacity .75s ease, visibility .75s; }
+.main-preloader__images img { transition: opacity .5s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+.local-custom-cursor body { cursor: none; }
+.local-runtime-ready .cursor { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 20; }
+.local-runtime-ready .cursor--hovers { opacity: 0; transition: opacity .25s ease; }
+.local-runtime-ready .scene { display: none !important; }
+.local-runtime-ready .main-preloader { background: #fcfcfc; }
+.local-runtime-ready body.local-discover .cursor--hovers { opacity: 1; }
+.local-runtime-ready body.local-discover .cursor--main { opacity: 0; }
+.local-runtime-ready .navbar.local-menu-open .navbar__wrapper { opacity: 1; pointer-events: auto; visibility: visible; }
+.local-runtime-ready .work-item__header { cursor: pointer; }
+.local-runtime-ready .work-item.local-open .work-item__details { display: grid !important; }
+.local-runtime-ready [data-anim], .local-runtime-ready .text-anim { transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+
+@keyframes local-preloader-exit {
+  0%, 72% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-preloader { animation-delay: 1s; animation-duration: 1s; }
+}
