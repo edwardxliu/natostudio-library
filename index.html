@@ -12,7 +12,7 @@
 	<link rel="alternate" hreflang="en" href="https://cappen.com/">
 	<link rel="alternate" hreflang="pt-BR" href="https://cappen.com/pt/">
 	<link rel="alternate" hreflang="x-default" href="https://cappen.com/">
-	<title>Cappen | Award-Winning Web Design &amp; Development Studio</title>
+	<title>NAATO | Award-Winning Web Design &amp; Development Studio</title>
 <meta name='robots' content='index, max-snippet:-1, max-image-preview:large, max-video-preview:-1, follow' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<meta name="google" content="nositelinkssearchbox" ><link rel="canonical" href="https://cappen.com/" />
@@ -1562,7 +1562,7 @@ Digital Platforms & Activations					</div>
 		</div>
 
 		<div class="footer__end">
-			<div class="footer__end__copyright" data-component="text-anim">©2026 Cappen GROUP LLC. All Rights Reserved</div>
+			<div class="footer__end__copyright" data-component="text-anim">©2026 NAATO Universe. All Rights Reserved</div>
 			<div class="footer__end__center">
 								<span data-component="text-anim">Working Worldwide from</span>
 														<div class="tag">MIAMI,US</div>
@@ -1583,6 +1583,27 @@ Digital Platforms & Activations					</div>
 		const path = new URL(work.dataset.link, window.location.href).pathname.replace(/\/?$/, '/');
 		work.dataset.link = `//${window.location.host}${path}`;
 	});
+
+	const protectMedia = (root = document) => {
+		root.querySelectorAll('img, video').forEach((media) => {
+			media.draggable = false;
+			media.style.webkitUserDrag = 'none';
+			media.style.webkitTouchCallout = 'none';
+			if (media.tagName === 'VIDEO') {
+				media.controlsList?.add('nodownload', 'noremoteplayback');
+				media.disablePictureInPicture = true;
+				media.disableRemotePlayback = true;
+			}
+		});
+	};
+
+	protectMedia();
+	document.addEventListener('dragstart', (event) => {
+		if (event.target.closest?.('img, video')) event.preventDefault();
+	}, true);
+	document.addEventListener('contextmenu', (event) => {
+		if (event.target.closest?.('img, video')) event.preventDefault();
+	}, true);
 	</script>
 	</body>
 
