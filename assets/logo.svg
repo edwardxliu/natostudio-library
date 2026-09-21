@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="103" height="16" viewBox="0 0 103 16">
+  <!-- 占位 Logo:正式 Logo 到位后直接替换本文件,保留 id="logo" 的元素和 103×16 的比例即可 -->
+  <g id="logo" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+    <path d="M2 14.5V1.5l16 13V1.5" />
+    <path d="M28 14.5 37 1.5l9 13M31.1 10h11.8" />
+    <path d="M55 1.5h18M64 1.5v13" />
+    <ellipse cx="92" cy="8" rx="9" ry="6.5" />
+  </g>
+</svg>
