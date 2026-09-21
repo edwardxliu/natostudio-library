@@ -2,6 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/work/:slug/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/work/:path*", "destination": "/index.html" }
+    { "source": "/work/:path*", "destination": "/index.html" },
+    { "source": "/:section(works|about|updates|start-a-project)", "destination": "/index.html" }
   ]
 }

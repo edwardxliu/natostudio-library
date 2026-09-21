@@ -91,7 +91,7 @@ var pagelayer_recaptch_version = "";
 <meta name="msapplication-TileImage" content="./assets/img/favicon-300x300.png" />
 	<script>window.manifest= {"model":{"scene.spline":"3591b"}},window.baseURL=window.location.origin,window.themeURL=window.location.origin+"/assets"</script>
 	<style id="featured-work-framing">html .case-card__wrapper__fig img{scale:1.08}</style>
-<link rel="icon" href="./assets/img/favicon-150x150.png"></head>
+<link rel="icon" href="./assets/img/favicon-150x150.png"><script src="./assets/js/local-nav.js" defer></script></head>
 
 	<body class="bg-transition">
 			<div class="main-preloader hide">
@@ -210,7 +210,7 @@ var pagelayer_recaptch_version = "";
 
 	<div class="navbar__logo-wrapper navbar__item">
 
-		<a class="navbar__logo" href="https://natostudio.co/" aria-label="NATO Studio">
+		<a class="navbar__logo" href="/" aria-label="Home" data-router>
 			<svg viewBox="0 0 103 16">
 				<use href="#logo"></use>
 			</svg>
@@ -230,7 +230,7 @@ var pagelayer_recaptch_version = "";
 
 		<nav class="navbar__nav">
 
-			<a class="navbar__link navbar__item" href="/" aria-label="Works" target="_self" data-router="custom" data-cursor="none" data-component="circle-hover">
+			<a class="navbar__link navbar__item" href="#works" aria-label="Works" data-scroll-to="works" data-cursor="none" data-component="circle-hover">
 				<div class="navbar__link__wrapper">
 					<div class="navbar__link__label"><span>Works</span></div>
 					<div class="navbar__link__ic ic-hover">
@@ -241,7 +241,7 @@ var pagelayer_recaptch_version = "";
 				</div>
 			</a>
 
-			<a class="navbar__link navbar__item" href="https://natostudio.co/about-us" aria-label="About" target="_self" data-cursor="none" data-component="circle-hover">
+			<a class="navbar__link navbar__item" href="#about" aria-label="About" data-scroll-to="about" data-cursor="none" data-component="circle-hover">
 				<div class="navbar__link__wrapper">
 					<div class="navbar__link__label"><span>About</span></div>
 					<div class="navbar__link__ic ic-hover">
@@ -263,7 +263,7 @@ var pagelayer_recaptch_version = "";
 				</div>
 			</a>
 
-			<a class="navbar__link navbar__item" href="https://natostudio.co/#cat-canvas" aria-label="Start a Project" target="_self" data-cursor="none" data-component="circle-hover">
+			<a class="navbar__link navbar__item" href="#start-a-project" aria-label="Start a Project" data-scroll-to="start-a-project" data-cursor="none" data-component="circle-hover">
 				<div class="navbar__link__wrapper">
 					<div class="navbar__link__label"><span>Start a Project</span></div>
 					<div class="navbar__link__ic ic-hover">
@@ -673,7 +673,7 @@ var pagelayer_recaptch_version = "";
 	</div>
 </section>
 
-<section class="work section">
+<section class="work section" id="works">
 		<header class="header-section" data-component="header-section">
 	<div class="header-section__wrapper">
 		<div class="header-section__label" data-component="text-anim" data-component-type="line">Featured Work</div>
@@ -1265,7 +1265,7 @@ var pagelayer_recaptch_version = "";
 		</section>
 	</section>
 
-<section class="about section" data-component="about">
+<section class="about section" id="about" data-component="about">
 	<section class="about__images" data-component="about-images">
 				<figure class="hidden" data-component="fluid-image">
 			<img width="1024" height="1024" src="./assets/img/ac27bf387330997229d7b931c2aa86c858caf0134e4ccdf74d75e32b6e5ba5cc.webp" class="attachment-full size-full" alt="" decoding="async" />		</figure>
@@ -1444,7 +1444,7 @@ Digital Platforms & Activations					</div>
 	</section>
 </section>
 
-<section class="talk section" data-component="lets-talk">
+<section class="talk section" id="start-a-project" data-component="lets-talk">
 	<section class="talk__title-wrapper">
 		<div class="talk__title-sticky">
 			<h2 class="talk__title">LET’S TALK IDEAS</h2>
